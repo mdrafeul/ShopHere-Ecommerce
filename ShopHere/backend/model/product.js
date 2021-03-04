@@ -38,15 +38,17 @@ const productSchema = new mongoose.Schema({
         required: [true, 'Please select the category of the product'],
         enum: {
             values:[
+                'Accessories',
                 'Electronics',
-                'Camera',
-                'Laptop',
+                'Cameras',
+                'Laptops',
                 'Food',
                 'Books',
                 'Cloths/Shoes',
                 'Beauty/Health',
                 'Sports',
                 'Outdoor',
+                "Headphones",
                 'Home'
             ],
             message: 'Please select correct category for the product'
@@ -88,4 +90,4 @@ const productSchema = new mongoose.Schema({
     }
 })
 
-module.exports= mongoose.model('Product',productSchema);
+module.exports = mongoose.model('Product',productSchema);
